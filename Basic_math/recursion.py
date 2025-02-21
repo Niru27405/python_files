@@ -48,3 +48,11 @@ def f(i,n):
 n = int(input())
 f(n,n)
 
+# print linearly from 1-n(BackTracking)
+def f(i,n):
+    if(i>n):
+        return
+    f(i+1,n)
+    print(i)
+n = int(input())
+f(1,n)

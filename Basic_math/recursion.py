@@ -56,3 +56,12 @@ def f(i,n):
     print(i)
 n = int(input())
 f(1,n)
+
+# print sum of first N numbers
+def f(i,sum):
+    if(i<1):
+        print(sum)
+        return 
+    f(i-1,sum +i)
+n = int(input())
+f(n,0)

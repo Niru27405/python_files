@@ -57,7 +57,7 @@ def f(i,n):
 n = int(input())
 f(1,n)
 
-# print sum of first N numbers
+# print sum of first N numbers(parameterized)
 def f(i,sum):
     if(i<1):
         print(sum)
@@ -65,3 +65,19 @@ def f(i,sum):
     f(i-1,sum +i)
 n = int(input())
 f(n,0)
+
+# print sum of first N numbers(functional)
+def f (n):
+    if(n==0):
+        return 0
+    return n + f(n-1)
+n = int(input())
+print(f(n))
+
+# print factorial of N
+def f(n):
+    if (n==0):
+        return 1
+    return n*f(n-1)
+n = int(input())
+print(f(n)) 

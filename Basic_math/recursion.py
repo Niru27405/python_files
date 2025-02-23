@@ -81,3 +81,14 @@ def f(n):
     return n*f(n-1)
 n = int(input())
 print(f(n)) 
+
+# reverse an array (recursion)
+def f(arr,l,r):
+    if l>=r:
+        return
+    arr[l],arr[r] = arr[r],arr[l]
+    f(arr, l+1, r-1)
+
+arr = list(map(int, input().split()))
+f(arr,0,len(arr)-1)
+print(arr)

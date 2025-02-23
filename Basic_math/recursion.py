@@ -82,7 +82,7 @@ def f(n):
 n = int(input())
 print(f(n)) 
 
-# reverse an array (recursion)
+# reverse an array (recursion)(double pointer)
 def f(arr,l,r):
     if l>=r:
         return
@@ -92,3 +92,33 @@ def f(arr,l,r):
 arr = list(map(int, input().split()))
 f(arr,0,len(arr)-1)
 print(arr)
+# reverse an array (recursion)(single pointer)
+def f(i):
+    if(i>=len(a)/2):
+        return
+    a[i], a[len(a)-i-1]= a[len(a)-i-1] , a[i]
+    f(i+1)
+a = list(map(int, input().split()))
+f(0)
+print(a)
+
+# Check if a string is a palindrome
+def f(i):
+    if(i>=len(n)/2):
+        return True
+    elif n[i] != n[len(n)-i-1]:
+        return False
+    return f(i+1)
+n = str(input())
+if f(0):
+    print ("Palindrome")
+else:
+    print("Not Palindrome")
+# Fibonacci Series
+def f(n):
+    if(n<=1):
+        return n
+    return f(n-1)+f(n-2)
+n = int(input())
+f(n)
+print(f(n))

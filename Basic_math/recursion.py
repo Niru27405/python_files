@@ -92,6 +92,7 @@ def f(arr,l,r):
 arr = list(map(int, input().split()))
 f(arr,0,len(arr)-1)
 print(arr)
+
 # reverse an array (recursion)(single pointer)
 def f(i):
     if(i>=len(a)/2):
@@ -114,6 +115,7 @@ if f(0):
     print ("Palindrome")
 else:
     print("Not Palindrome")
+
 # Fibonacci Series
 def f(n):
     if(n<=1):
@@ -122,3 +124,15 @@ def f(n):
 n = int(input())
 f(n)
 print(f(n))
+
+# Print all subsequences 
+def f(ind,arr,n):
+    if(ind >= len(n)):
+        print(arr)
+        return
+    arr.append(n[ind])
+    f(ind+1,arr,n)
+    arr.pop()
+    f(ind+1,arr,n)
+n = list(map(int,input().split()))
+f(0,[],n)

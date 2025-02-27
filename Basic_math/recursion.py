@@ -136,3 +136,38 @@ def f(ind,arr,n):
     f(ind+1,arr,n)
 n = list(map(int,input().split()))
 f(0,[],n)
+
+# Print subsequence whose sum is k
+def f(i,ds,s,n):
+    if i == len(n):
+        if s == 2:
+            print(ds)
+        return
+    ds.append(n[i])
+    s += n[i]
+    f(i+1,ds,s,n)
+    ds.pop()
+    s -= n[i]
+    f(i+1,ds,s,n)
+n = list(map(int,input().split()))
+f(0,[],0,n)
+
+# Print any subsequence whose sum is k
+def f(i,ds,s,n):
+    if i == len(n):
+        if s == 2:
+            print(ds)
+            return True
+        return False
+    
+    ds.append(n[i])
+    s += n[i]
+    if f(i+1,ds,s,n)== True:
+        return True
+    ds.pop()
+    s -= n[i]
+    if f(i+1,ds,s,n) == True:
+        return True
+    return False
+n = list(map(int,input().split()))
+f(0,[],0,n)

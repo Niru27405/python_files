@@ -171,3 +171,20 @@ def f(i,ds,s,n):
     return False
 n = list(map(int,input().split()))
 f(0,[],0,n)
+
+#Count the number of subsequence
+def f(i,s,n):
+    if i == len(n):
+        if s == 2:
+            
+            return 1
+        return 0
+    s += n[i]
+    l = f(i+1,s,n)
+    s -= n[i]
+    r = f(i+1,s,n) 
+    return l+r
+n = list(map(int,input().split()))
+print(f(0,0,n))
+
+

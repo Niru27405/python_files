@@ -18,3 +18,7 @@ f = Counter(n)
 num = int(input())
 print(f[num])
 
+
+
+
+    

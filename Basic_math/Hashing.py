@@ -11,12 +11,21 @@ num = int(input())
 d =f(num,n)
 print(d)
 
-# Hashing
-from collections import Counter
+
 n = int(input())
-f = Counter(n)
-num = int(input())
-print(f[num])
+arr = list(map(int, input().split()))
+
+# precompute:
+hash = [0] * 13
+for i in range(n):
+    hash[arr[i]] += 1
+
+q = int(input())
+for _ in range(q):
+    number = int(input())
+    # fetching:
+    print(hash[number])
+
 
 
 

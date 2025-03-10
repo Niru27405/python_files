@@ -11,6 +11,7 @@ num = int(input())
 d =f(num,n)
 print(d)
 
+# Hashing
 
 n = int(input())
 arr = list(map(int, input().split()))
@@ -25,6 +26,15 @@ for _ in range(q):
     number = int(input())
     # fetching:
     print(hash[number])
+
+n = str(input())
+c = str(input())
+cnt = 0
+for char in n:
+    if char == c:
+        cnt += 1
+print(cnt)
+
 
 
 

@@ -11,7 +11,7 @@ for i in range(len(n)):
 for t in unique:
     print(t)
 
-# Better Approach
+# Optimal Approach
 
 n = list(map(int,input().split()))
 n.sort()
